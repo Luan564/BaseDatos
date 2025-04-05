@@ -1,0 +1,26 @@
+total 92
+drwxr-x--- 19 luan luan 4096 feb 13 17:47 .
+drwxr-xr-x  4 root root 4096 feb  9 22:03 ..
+-rw-------  1 luan luan  275 feb  9 23:18 .bash_history
+-rw-r--r--  1 luan luan  220 mar 31  2024 .bash_logout
+-rw-r--r--  1 luan luan 3771 mar 31  2024 .bashrc
+drwx------ 15 luan luan 4096 feb  9 23:00 .cache
+drwx------ 15 luan luan 4096 feb 13 17:09 .config
+drwxr-xr-x  3 luan luan 4096 feb  9 23:18 Descargas
+drwxr-xr-x  2 luan luan 4096 feb  9 22:04 Documentos
+drwxrwxr-x  3 luan luan 4096 feb  9 23:00 .dotnet
+drwxr-xr-x  3 luan luan 4096 feb  9 23:20 Escritorio
+drwx------  2 luan luan 4096 feb 13 17:19 .gnupg
+drwxr-xr-x  2 luan luan 4096 feb  9 22:04 Imágenes
+-rw-rw-r--  1 luan luan    0 feb 13 17:47 lista.txt
+drwx------  4 luan luan 4096 feb  9 22:04 .local
+drwxr-xr-x  2 luan luan 4096 feb  9 22:04 Música
+drwx------  3 luan luan 4096 feb  9 22:58 .pki
+drwxr-xr-x  2 luan luan 4096 feb  9 22:04 Plantillas
+-rw-r--r--  1 luan luan  807 mar 31  2024 .profile
+drwxr-xr-x  2 luan luan 4096 feb  9 22:04 Público
+drwx------  7 luan luan 4096 feb 13 17:05 snap
+drwx------  2 luan luan 4096 feb  9 22:04 .ssh
+-rw-r--r--  1 luan luan    0 feb  9 23:06 .sudo_as_admin_successful
+drwxr-xr-x  2 luan luan 4096 feb  9 22:04 Vídeos
+drwxrwxr-x  4 luan luan 4096 feb  9 22:59 .vscode

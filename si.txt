@@ -1,0 +1,20 @@
+INSERT INTO productos (nombre, categoria, talla, precio, stock) VALUES ('Camiseta básica', 'ropa', 'M', 19.99, 50), ('Zapatos deportivos', 'calzado', '42', 59.99, 30),('Jeans ajustados', 'ropa', 'L', 39.99, 20);
+
+
+INSERT INTO clientes (nombre, email, telefono) VALUES ('Ana García', 'ana.garcia@example.com', '555-1234'),('Carlos López', 'carlos.lopez@example.com', '555-5678');
+
+
+INSERT INTO ventas (id_cliente, id_producto, fecha_venta, cantidad, total) VALUES (1, 1, '2023-10-01', 2, 39.98), (2, 3, '2023-10-02', 1, 39.99);
+
+
+para el archivo de llenado, en BEGIN:
+
+INSERT INTO productos (nombre, categoria, talla, precio, stock) VALUES
+
+en el cuerpo será separar por renglones y con el siguiente formato:
+
+('Camiseta básica', 'ropa', 'M', 19.99, 50),
+
+por ultimo en END agregamos:
+
+;

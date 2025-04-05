@@ -1,0 +1,25 @@
+1003, 2023-01-12, Silla, Muebles 180,00, 5, Este
+1004, 2023-01-15, Mesa, Muebles 320,00, 2, Oeste
+1011, 2023-02-08, Escritorio, Muebles 200,00, 3, Este
+1012, 2023-02-11, Sofá, Muebles 600,00, 1, Oeste
+1016, 2023-02-23, Cama, Muebles 800,00, 1, Oeste
+1019, 2023-03-04, Armario, Muebles 450,00, 2, Este
+1023, 2023-03-16, Estantería, Muebles 120,00, 4, Este
+1027, 2023-03-28, Silla de Oficina, Muebles 220,00, 5, Este
+1030, 2023-04-06, Mesa de Centro, Muebles 180,00, 3, Sur
+1037, 2023-04-27, Silla de Comedor, Muebles 160,00, 4, Norte
+1039, 2023-05-03, Mesa de Noche, Muebles 90,00, 3, Este
+1043, 2023-05-15, Silla Plegable, Muebles 45,00, 6, Este
+1046, 2023-05-24, Mesa de Estudio, Muebles 140,00, 3, Sur
+1049, 2023-06-02, Reposapiés, Muebles 60,00, 4, Norte
+1051, 2023-06-08, Mesa de Exterior, Muebles 220,00, 2, Este
+1054, 2023-06-17, Silla de Jardín, Muebles 75,00, 5, Sur
+1057, 2023-06-26, Mesa de Dibujo, Muebles 110,00, 3, Norte
+1059, 2023-07-02, Silla de Bebé, Muebles 130,00, 2, Este
+1062, 2023-07-11, Mesa de Juego, Muebles 190,00, 2, Sur
+1064, 2023-07-17, Silla de Peluquería, Muebles 280,00, 1, Oeste
+1066, 2023-07-23, Mesa de Conferencia, Muebles 400,00, 1, Sur
+1068, 2023-07-29, Silla de Masaje, Muebles 320,00, 1, Oeste
+1070, 2023-08-04, Mesa de Ping Pong, Muebles 500,00, 1, Sur
+1072, 2023-08-10, Silla de Camping, Muebles 85,00, 4, Oeste
+1074, 2023-08-16, Mesa de Ordenador, Muebles 160,00, 3, Sur

@@ -1,0 +1,75 @@
+1001, Laptop, Electrónicos 1200,00, 3, 2023-01-05, Norte
+1002, Smartphone, Electrónicos 850,00, 7, 2023-01-08, Sur
+1003, Silla, Muebles 180,00, 5, 2023-01-12, Este
+1004, Mesa, Muebles 320,00, 2, 2023-01-15, Oeste
+1005, Monitor, Electrónicos 280,00, 4, 2023-01-18, Norte
+1006, Teclado, Electrónicos 65,00, 10, 2023-01-22, Sur
+1007, Libro, Libros 25,00, 15, 2023-01-25, Este
+1008, Impresora, Electrónicos 220,00, 3, 2023-01-28, Oeste
+1009, Tablet, Electrónicos 450,00, 6, 2023-02-02, Norte
+1010, Auriculares, Electrónicos 120,00, 8, 2023-02-05, Sur
+1011, Escritorio, Muebles 200,00, 3, 2023-02-08, Este
+1012, Sofá, Muebles 600,00, 1, 2023-02-11, Oeste
+1013, Mouse, Electrónicos 35,00, 12, 2023-02-14, Norte
+1014, Altavoz, Electrónicos 150,00, 5, 2023-02-17, Sur
+1015, Lámpara, Hogar 45,00, 7, 2023-02-20, Este
+1016, Cama, Muebles 800,00, 1, 2023-02-23, Oeste
+1017, Disco Duro, Electrónicos 90,00, 9, 2023-02-26, Norte
+1018, Cuaderno, Papelería 8,00, 20, 2023-03-01, Sur
+1019, Armario, Muebles 450,00, 2, 2023-03-04, Este
+1020, Router, Electrónicos 75,00, 6, 2023-03-07, Oeste
+1021, TV, Electrónicos 950,00, 2, 2023-03-10, Norte
+1022, Bolígrafo, Papelería 2,00, 50, 2023-03-13, Sur
+1023, Estantería, Muebles 120,00, 4, 2023-03-16, Este
+1024, Cámara, Electrónicos 350,00, 3, 2023-03-19, Oeste
+1025, Refrigerador, Electrodomésticos 1200,00, 1, 2023-03-22, Norte
+1026, Lavadora, Electrodomésticos 850,00, 1, 2023-03-25, Sur
+1027, Silla de Oficina, Muebles 220,00, 5, 2023-03-28, Este
+1028, Micrófono, Electrónicos 110,00, 4, 2023-03-31, Oeste
+1029, Licuadora, Electrodomésticos 80,00, 8, 2023-04-03, Norte
+1030, Mesa de Centro, Muebles 180,00, 3, 2023-04-06, Sur
+1031, Parlante Bluetooth, Electrónicos 95,00, 7, 2023-04-09, Este
+1032, Horno Microondas, Electrodomésticos 200,00, 4, 2023-04-12, Oeste
+1033, Libro de Cocina, Libros 30,00, 6, 2023-04-15, Norte
+1034, Mochila, Accesorios 70,00, 5, 2023-04-18, Sur
+1035, Cafetera, Electrodomésticos 150,00, 3, 2023-04-21, Este
+1036, Teclado Mecánico, Electrónicos 130,00, 5, 2023-04-24, Oeste
+1037, Silla de Comedor, Muebles 160,00, 4, 2023-04-27, Norte
+1038, Monitor Curvo, Electrónicos 400,00, 2, 2023-04-30, Sur
+1039, Mesa de Noche, Muebles 90,00, 3, 2023-05-03, Este
+1040, Aspiradora, Electrodomésticos 300,00, 2, 2023-05-06, Oeste
+1041, Tableta Gráfica, Electrónicos 250,00, 3, 2023-05-09, Norte
+1042, Libro de Fantasía, Libros 22,00, 8, 2023-05-12, Sur
+1043, Silla Plegable, Muebles 45,00, 6, 2023-05-15, Este
+1044, Ventilador, Electrodomésticos 120,00, 5, 2023-05-18, Oeste
+1045, Disco SSD, Electrónicos 110,00, 7, 2023-05-21, Norte
+1046, Mesa de Estudio, Muebles 140,00, 3, 2023-05-24, Sur
+1047, Batidora, Electrodomésticos 90,00, 4, 2023-05-27, Este
+1048, Libro de Historia, Libros 28,00, 5, 2023-05-30, Oeste
+1049, Reposapiés, Muebles 60,00, 4, 2023-06-02, Norte
+1050, Plancha, Electrodomésticos 85,00, 3, 2023-06-05, Sur
+1051, Mesa de Exterior, Muebles 220,00, 2, 2023-06-08, Este
+1052, Smartwatch, Electrónicos 300,00, 4, 2023-06-11, Oeste
+1053, Libro de Ciencia, Libros 35,00, 4, 2023-06-14, Norte
+1054, Silla de Jardín, Muebles 75,00, 5, 2023-06-17, Sur
+1055, Tostadora, Electrodomésticos 65,00, 6, 2023-06-20, Este
+1056, Webcam, Electrónicos 95,00, 5, 2023-06-23, Oeste
+1057, Mesa de Dibujo, Muebles 110,00, 3, 2023-06-26, Norte
+1058, Libro de Viajes, Libros 40,00, 3, 2023-06-29, Sur
+1059, Silla de Bebé, Muebles 130,00, 2, 2023-07-02, Este
+1060, Aire Acondicionado, Electrodomésticos 800,00, 1, 2023-07-05, Oeste
+1061, Proyector, Electrónicos 350,00, 2, 2023-07-08, Norte
+1062, Mesa de Juego, Muebles 190,00, 2, 2023-07-11, Sur
+1063, Libro de Arte, Libros 45,00, 3, 2023-07-14, Este
+1064, Silla de Peluquería, Muebles 280,00, 1, 2023-07-17, Oeste
+1065, Consola de Videojuegos, Electrónicos 500,00, 2, 2023-07-20, Norte
+1066, Mesa de Conferencia, Muebles 400,00, 1, 2023-07-23, Sur
+1067, Libro de Negocios, Libros 38,00, 4, 2023-07-26, Este
+1068, Silla de Masaje, Muebles 320,00, 1, 2023-07-29, Oeste
+1069, Drone, Electrónicos 450,00, 2, 2023-08-01, Norte
+1070, Mesa de Ping Pong, Muebles 500,00, 1, 2023-08-04, Sur
+1071, Libro de Poesía, Libros 20,00, 5, 2023-08-07, Este
+1072, Silla de Camping, Muebles 85,00, 4, 2023-08-10, Oeste
+1073, Cámara Deportiva, Electrónicos 280,00, 3, 2023-08-13, Norte
+1074, Mesa de Ordenador, Muebles 160,00, 3, 2023-08-16, Sur
+1075, Libro de Jardinería, Libros 32,00, 4, 2023-08-19, Este

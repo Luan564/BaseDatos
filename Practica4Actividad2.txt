@@ -1,0 +1,261 @@
+-- Crear la base de datos
+CREATE DATABASE refacciones_automotrices;
+USE refacciones_automotrices;
+
+
+-- Tabla de refacciones
+CREATE TABLE refacciones (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(100) NOT NULL,
+descripcion TEXT,
+precio DECIMAL(10, 2) NOT NULL,
+marca VARCHAR(50));
+
+
+
+-- Tabla de proveedores
+CREATE TABLE proveedores (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(100) NOT NULL,
+contacto VARCHAR(100),
+telefono VARCHAR(15));
+
+
+-- Tabla de inventario
+CREATE TABLE inventario (
+id INT AUTO_INCREMENT PRIMARY KEY,
+refaccion_id INT,
+proveedor_id INT,
+cantidad INT NOT NULL,
+fecha_ingreso DATE,
+FOREIGN KEY (refaccion_id) REFERENCES refacciones(id),
+FOREIGN KEY (proveedor_id) REFERENCES proveedores(id));
+
+
+
+-- Tabla de ventas
+CREATE TABLE ventas (
+id INT AUTO_INCREMENT PRIMARY KEY,
+refaccion_id INT,
+cantidad INT NOT NULL,
+fecha_venta DATE,
+total DECIMAL(10, 2) NOT NULL,
+FOREIGN KEY (refaccion_id) REFERENCES refacciones(id));
+
+
+INSERTAR EN TABLA DE REFACCIONES;
+
+INSERT INTO refacciones (nombre, descripcion, precio, marca) VALUES
+('Filtro de aceite', 'Filtro de aceite para motor de gasolina', 150.50, 'Bosch'),
+('Pastillas de freno', 'Pastillas de freno delanteras', 300.00, 'Brembo'),
+('Batería', 'Batería de 12V 60Ah', 1200.00, 'ACDelco'),
+('Amortiguadores', 'Amortiguadores traseros', 800.00, 'Monroe'),
+('Bujías', 'Bujías de iridio', 200.00, 'NGK'),
+('Correa de distribución', 'Correa de distribución para motor 2.0L', 450.00, 'Gates'),
+('Aceite de motor', 'Aceite sintético 5W-30', 250.00, 'Mobil 1'),
+('Radiador', 'Radiador de aluminio', 1200.00, 'Spectra'),
+('Alternador', 'Alternador de 12V 90A', 1800.00, 'Denso'),
+('Bomba de agua', 'Bomba de agua para motor 1.6L', 600.00, 'GMB'),
+('Discos de freno', 'Discos de freno delanteros', 700.00, 'Brembo'),
+('Lámparas', 'Lámparas H4 para faros', 150.00, 'Philips'),
+('Termostato', 'Termostato para motor 2.4L', 300.00, 'Stant'),
+('Sensor de oxígeno', 'Sensor de oxígeno universal', 400.00, 'Bosch'),
+('Filtro de aire', 'Filtro de aire de alto flujo', 180.00, 'K&N'),
+('Silenciador', 'Silenciador de escape', 900.00, 'Walker'),
+('Junta de culata', 'Junta de culata para motor 1.8L', 500.00, 'Fel-Pro'),
+('Bomba de gasolina', 'Bomba de gasolina eléctrica', 800.00, 'Delphi'),
+('Embrague', 'Kit de embrague completo', 1500.00, 'Luk'),
+('Rótula', 'Rótula de dirección', 350.00, 'Moog'),
+('Barra estabilizadora', 'Barra estabilizadora delantera', 400.00, 'Meyle'),
+('Bomba de dirección', 'Bomba de dirección hidráulica', 750.00, 'Cardone'),
+('Cable de acelerador', 'Cable de acelerador universal', 120.00, 'Dorman'),
+('Fusibles', 'Kit de fusibles variados', 50.00, 'Bussmann'),
+('Terminales de batería', 'Terminales de batería de cobre', 80.00, 'Install Bay'),
+('Correa de ventilador', 'Correa de ventilador para motor 3.0L', 200.00, 'Dayco'),
+('Tapa de radiador', 'Tapa de radiador de 16 PSI', 100.00, 'Stant'),
+('Válvula EGR', 'Válvula EGR para motor 2.2L', 450.00, 'Standard'),
+('Suspensión', 'Kit de suspensión completa', 2500.00, 'KYB'),
+('Filtro de combustible', 'Filtro de combustible de alta presión', 220.00, 'Wix'),
+('Caja de cambios', 'Caja de cambios manual', 3000.00, 'ZF'),
+('Intercooler', 'Intercooler para turbo', 1500.00, 'Garrett'),
+('Turbo', 'Turbocharger para motor 2.0L', 3500.00, 'BorgWarner'),
+('Sonda lambda', 'Sonda lambda universal', 300.00, 'Bosch'),
+('Cable de bujía', 'Juego de cables de bujía', 250.00, 'NGK'),
+('Filtro de habitáculo', 'Filtro de aire acondicionado', 120.00, 'Mann-Filter'),
+('Bomba de freno', 'Bomba de freno principal', 600.00, 'ATE'),
+('Cremallera de dirección', 'Cremallera de dirección hidráulica', 1800.00, 'TRW'),
+('Rodamiento de rueda', 'Rodamiento de rueda delantera', 400.00, 'SKF'),
+('Correa de accesorios', 'Correa de accesorios para motor 2.5L', 250.00, 'Contitech'),
+('Tapa de válvulas', 'Tapa de válvulas de aluminio', 300.00, 'Dorman'),
+('Sensores de estacionamiento', 'Kit de sensores de estacionamiento', 500.00, 'Parkmate'),
+('Cable de freno', 'Cable de freno de emergencia', 150.00, 'Dorman'),
+('Cojinete de embrague', 'Cojinete de embrague para transmisión manual', 200.00, 'Luk'),
+('Resorte de válvula', 'Juego de resortes de válvula', 350.00, 'Comp Cams'),
+('Válvula de control de aire', 'Válvula de control de aire en ralentí', 280.00, 'Standard'),
+('Cable de velocidad', 'Cable de velocímetro', 120.00, 'Dorman'),
+('Filtro de transmisión', 'Filtro de transmisión automática', 180.00, 'Wix'),
+('Soporte de motor', 'Soporte de motor delantero', 400.00, 'Anchor');
+
+
+
+INSERTAR EN TABLA DE PROVEEDORES;
+
+INSERT INTO proveedores (nombre, contacto, telefono) VALUES
+('Autopartes MX', 'Juan Pérez', '555-1234-5678'),
+('Refacciones Premium', 'María López', '555-8765-4321'),
+('Distribuidora de Baterías', 'Carlos Sánchez', '555-5555-5555'),
+('Repuestos Rápidos', 'Ana Martínez', '555-1111-2222'),
+('Importaciones Automotrices', 'Luis García', '555-3333-4444'),
+('Todo para tu Auto', 'Sofía Ramírez', '555-6666-7777'),
+('Accesorios y Refacciones', 'Pedro Hernández', '555-8888-9999'),
+('Distribuidora Nacional', 'Laura Gómez', '555-0000-1111'),
+('Autopartes del Norte', 'Jorge Díaz', '555-2222-3333'),
+('Refacciones Express', 'Carmen Ruiz', '555-4444-5555'),
+('Repuestos Originales', 'Miguel Torres', '555-6666-8888'),
+('Distribuidora de Frenos', 'Alejandro Mendoza', '555-7777-9999'),
+('Accesorios Automotrices', 'Patricia Castro', '555-9999-0000'),
+('Refacciones y Más', 'Ricardo Vargas', '555-1212-3434'),
+('Autopartes del Sur', 'Fernanda Ortega', '555-4545-6767'),
+('Distribuidora de Motores', 'Roberto Medina', '555-7878-9090'),
+('Repuestos de Calidad', 'Gabriela Ríos', '555-2323-4545'),
+('Accesorios Premium', 'Héctor Guzmán', '555-5656-7878'),
+('Refacciones Económicas', 'Lucía Paredes', '555-8989-0101'),
+('Distribuidora de Suspensión', 'Francisco Luna', '555-3434-5656'),
+('Repuestos y Accesorios', 'Isabel Sosa', '555-6767-8989'),
+('Autopartes del Este', 'Ra ́ul Jiménez', '555-9898-1212'),
+('Refacciones Originales', 'Adriana N ́u~nez', '555-2323-4545'),
+('Distribuidora de Transmisiones', 'Sergio Vega', '555-5656-7878'),
+('Accesorios del Futuro', 'Diana Rojas', '555-8989-0101'),
+('Repuestos Nacionales', 'Javier Morales', '555-3434-5656'),
+('Autopartes del Oeste', 'Verónica Silva', '555-6767-8989'),
+('Refacciones y Accesorios', 'Arturo Campos', '555-9898-1212'),
+('Distribuidora de Frenos y Embragues', 'Marina Reyes', '555-2323-4545'),
+('Repuestos de Alta Calidad', 'Oscar Guerrero', '555-5656-7878'),
+('Accesorios Automotrices MX', 'Lorena Cortés', '555-8989-0101'),
+('Refacciones del Norte', 'Felipe Méndez', '555-3434-5656'),
+('Distribuidora de Bujías', 'Silvia Aguilar', '555-6767-8989'),
+('Repuestos y Más', 'Manuel Navarro', '555-9898-1212'),
+('Autopartes del Centro', 'Claudia Miranda', '555-2323-4545'),
+('Refacciones Express MX', 'Eduardo Rangel', '555-5656-7878'),
+('Distribuidora de Amortiguadores', 'Alejandra León', '555-8989-0101'),
+('Repuestos Originales MX', 'José Espinoza', '555-3434-5656'),
+('Accesorios del Motor', 'Ana Beltrán', '555-6767-8989'),
+('Refacciones y Repuestos', 'Carlos Valdez', '555-9898-1212'),
+('Distribuidora de Radiadores', 'Marisol Fuentes', '555-2323-4545'),
+('Repuestos de Lujo', 'Roberto Cervantes', '555-5656-7878'),
+('Accesorios de Alta Gama', 'Lucero Méndez', '555-8989-0101'),
+('Refacciones del Sur', 'Hugo Ponce', '555-3434-5656'),
+('Distribuidora de Correas', 'Rosa Salazar', '555-6767-8989'),
+('Repuestos y Accesorios MX', 'Gerardo Acosta', '555-9898-1212'),
+('Autopartes del Futuro', 'Natalia Vázquez', '555-2323-4545'), 
+('Refacciones y Más MX', 'Alberto Ibarra', '555-5656-7878'),
+('Distribuidora de Sensores', 'Beatriz Zamora', '555-8989-0101');
+
+
+INSERT INTO inventario (refaccion_id, proveedor_id, cantidad, fecha_ingreso) VALUES 
+(1, 1, 50, '2023-10-01'),
+(2, 2, 30, '2023-10-02'),
+(3, 3, 20, '2023-10-03'),
+(4, 1, 15, '2023-10-04'),
+(5, 4, 40, '2023-10-05'),
+(6, 5, 25, '2023-10-06'),
+(7, 6, 60, '2023-10-07'),
+(8, 7, 10, '2023-10-08'),
+(9, 8, 5, '2023-10-09'),
+(10, 9, 35, '2023-10-10'),
+(11, 10, 20, '2023-10-11'),
+(12, 11, 50, '2023-10-12'),
+(13, 12, 15, '2023-10-13'),
+(14, 13, 30, '2023-10-14'),
+(15, 14, 40, '2023-10-15'),
+(16, 15, 10, '2023-10-16'),
+(17, 16, 25, '2023-10-17'),
+(18, 17, 50, '2023-10-18'),
+(19, 18, 20, '2023-10-19'),
+(20, 19, 30, '2023-10-20'),
+(21, 20, 15, '2023-10-21'),
+(22, 21, 40, '2023-10-22'),
+(23, 22, 25, '2023-10-23'),
+(24, 23, 60, '2023-10-24'),
+(25, 24, 10, '2023-10-25'),
+(26, 25, 5, '2023-10-26'),
+(27, 26, 35, '2023-10-27'),
+(28, 27, 20, '2023-10-28'),
+(29, 28, 50, '2023-10-29'),
+(30, 29, 15, '2023-10-30'),
+(31, 30, 30, '2023-10-31'),
+(32, 31, 40, '2023-11-01'),
+(33, 32, 10, '2023-11-02'),
+(34, 33, 25, '2023-11-03'),
+(35, 34, 50, '2023-11-04'),
+(36, 35, 20, '2023-11-05'),
+(37, 36, 30, '2023-11-06'),
+(38, 37, 15, '2023-11-07'),
+(39, 38, 40, '2023-11-08'),
+(40, 39, 25, '2023-11-09'),
+(41, 40, 60, '2023-11-10'),
+(42, 41, 10, '2023-11-11'),
+(43, 42, 5, '2023-11-12'),
+(44, 43, 35, '2023-11-13'),
+(45, 44, 20, '2023-11-14'),
+(46, 45, 50, '2023-11-15'),
+(47, 46, 15, '2023-11-16'),
+(48, 47, 30, '2023-11-17'),
+(49, 48, 40, '2023-11-18');
+
+
+
+
+
+
+
+INSERT INTO ventas (refaccion_id, cantidad, fecha_venta, total) VALUES
+(1, 5, '2023-10-05', 752.50),
+(2, 2, '2023-10-06', 600.00),
+(3, 1, '2023-10-07', 1200.00),
+(4, 3, '2023-10-08', 2400.00),
+(5, 4, '2023-10-09', 800.00),
+(6, 2, '2023-10-10', 900.00),
+(7, 10, '2023-10-11', 2500.00),
+(8, 1, '2023-10-12', 1200.00),
+(9, 1, '2023-10-13', 1800.00),
+(10, 5, '2023-10-14', 3000.00),
+(11, 3, '2023-10-15', 2100.00),
+(12, 10, '2023-10-16', 1500.00),
+(13, 2, '2023-10-171', 600.00),
+(14, 4, '2023-10-18', 1600.00),
+(15, 5, '2023-10-19', 900.00),
+(16, 1, '2023-10-201', 900.00),
+(17, 3, '2023-10-21', 1500.00),
+(18, 5, '2023-10-22', 4000.00),
+(19, 2, '2023-10-23', 3000.00),
+(20, 4, '2023-10-24', 1400.00),
+(21, 3, '2023-10-25', 1200.00),
+(22, 5, '2023-10-26', 3750.00),
+(23, 2, '2023-10-27', 500.00),
+(24, 10, '2023-10-28', 500.00),
+(25, 1, '2023-10-29', 80.00),
+(26, 2, '2023-10-30', 400.00),
+(27, 5, '2023-10-311', 500.00),
+(28, 3, '2023-11-01', 1350.00),
+(29, 4, '2023-11-02', 10000.00),
+(30, 2, '2023-11-03', 440.00),
+(31, 5, '2023-11-04', 1500.00),
+(32, 1, '2023-11-05', 1500.00),
+(33, 3, '2023-11-06', 10500.00),
+(34, 2, '2023-11-07', 600.00),
+(35, 4, '2023-11-08', 1400.00),
+(36, 5, '2023-11-09', 1750.00),
+(37, 1, '2023-11-10', 280.00),
+(38, 3, '2023-11-11', 450.00),
+(39, 2, '2023-11-12', 240.00),
+(40, 5, '2023-11-13', 600.00),
+(41, 1, '2023-11-14', 180.00),
+(42, 3, '2023-11-15', 1500.00),
+(43, 2, '2023-11-16', 10.00),
+(44, 4, '2023-11-17', 700.00),
+(45, 5, '2023-11-18', 1000.00),
+(46, 1, '2023-11-19', 400.00),
+(47, 3, '2023-11-20', 450.00),
+(48, 2, '2023-11-21', 600.00),
+(49, 4, '2023-11-22', 1600.00);

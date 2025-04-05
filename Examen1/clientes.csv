@@ -1,0 +1,51 @@
+id_cliente,nombre,direccion,telefono,email,fecha_registro
+1,Laura Martínez,Calle 123 #45-67,3111111111,laura@email.com,2023-01-15
+2,Andrés Ramírez,Av. Principal 89-10,3222222222,andres@email.com,2023-02-20
+3,Sofía Herrera,Carrera 56 #78-90,3333333333,sofia@email.com,2023-03-10
+4,Diego Castro,Diagonal 34 #12-34,3444444444,diego@email.com,2023-04-05
+5,Valentina Ríos,Transversal 78 #56-12,3555555555,valentina@email.com,2023-05-18
+6,Carlos Mendoza,Calle 45 #67-89,3666666666,carlos@email.com,2023-01-22
+7,María González,Carrera 12 #34-56,3777777777,maria@email.com,2023-02-14
+8,Javier López,Avenida 78 #90-12,3888888888,javier@email.com,2023-03-05
+9,Ana Torres,Calle 90 #12-34,3999999999,ana@email.com,2023-04-18
+10,Pablo Díaz,Diagonal 56 #78-90,3000000000,pablo@email.com,2023-05-30
+11,Daniela Sánchez,Carrera 34 #56-78,3111222333,daniela@email.com,2023-01-10
+12,Ricardo Gómez,Calle 67 #89-01,3222333444,ricardo@email.com,2023-02-25
+13,Carolina Pérez,Avenida 23 #45-67,3333444555,carolina@email.com,2023-03-15
+14,Fernando Ruiz,Diagonal 12 #34-56,3444555666,fernando@email.com,2023-04-20
+15,Patricia Herrera,Calle 78 #90-12,3555666777,patricia@email.com,2023-05-05
+16,Roberto Castro,Carrera 45 #67-89,3666777888,roberto@email.com,2023-01-28
+17,Luisa Morales,Avenida 56 #78-90,3777888999,luisa@email.com,2023-02-08
+18,Jorge Rojas,Diagonal 67 #89-01,3888999000,jorge@email.com,2023-03-22
+19,Sandra Peña,Calle 34 #56-78,3999000111,sandra@email.com,2023-04-15
+20,Mario Jiménez,Carrera 90 #12-34,3000111222,mario@email.com,2023-05-25
+21,Adriana Silva,Avenida 12 #34-56,3111222333,adriana@email.com,2023-01-05
+22,Oscar Méndez,Diagonal 45 #67-89,3222333444,oscar@email.com,2023-02-15
+23,Natalia Vargas,Calle 56 #78-90,3333444555,natalia@email.com,2023-03-18
+24,Alberto Soto,Carrera 23 #45-67,3444555666,alberto@email.com,2023-04-10
+25,Beatriz Ríos,Avenida 34 #56-78,3555666777,beatriz@email.com,2023-05-20
+26,Enrique Guzmán,Diagonal 78 #90-12,3666777888,enrique@email.com,2023-01-12
+27,Claudia Pardo,Calle 12 #34-56,3777888999,claudia@email.com,2023-02-22
+28,Arturo Sandoval,Carrera 45 #67-89,3888999000,arturo@email.com,2023-03-08
+29,Verónica Cruz,Avenida 56 #78-90,3999000111,veronica@email.com,2023-04-25
+30,José Luis Mora,Diagonal 67 #89-01,3000111222,joseluis@email.com,2023-05-15
+31,María Fernanda López,Calle 34 #56-78,3111222333,mariafernanda@email.com,2023-01-18
+32,Carlos Andrés Ramírez,Carrera 90 #12-34,3222333444,carlosandres@email.com,2023-02-28
+33,Paola Guerrero,Avenida 12 #34-56,3333444555,paola@email.com,2023-03-12
+34,Javier Méndez,Diagonal 45 #67-89,3444555666,javier@email.com,2023-04-08
+35,Daniela Sánchez,Calle 56 #78-90,3555666777,daniela@email.com,2023-05-22
+36,Felipe González,Carrera 23 #45-67,3666777888,felipe@email.com,2023-01-25
+37,Lucía Rangel,Avenida 34 #56-78,3777888999,lucia@email.com,2023-02-05
+38,Roberto Sarmiento,Diagonal 78 #90-12,3888999000,roberto@email.com,2023-03-20
+39,Ana María Pardo,Calle 12 #34-56,3999000111,anamaria@email.com,2023-04-12
+40,José Luis Cabrera,Carrera 45 #67-89,3000111222,joseluis@email.com,2023-05-08
+41,María Fernanda López,Avenida 56 #78-90,3111222333,mariafernanda@email.com,2023-01-30
+42,Carlos Andrés Ramírez,Diagonal 67 #89-01,3222333444,carlosandres@email.com,2023-02-10
+43,Paola Guerrero,Calle 34 #56-78,3333444555,paola@email.com,2023-03-25
+44,Javier Méndez,Carrera 90 #12-34,3444555666,javier@email.com,2023-04-18
+45,Daniela Sánchez,Avenida 12 #34-56,3555666777,daniela@email.com,2023-05-10
+46,Felipe González,Diagonal 45 #67-89,3666777888,felipe@email.com,2023-01-08
+47,Lucía Rangel,Calle 56 #78-90,3777888999,lucia@email.com,2023-02-20
+48,Roberto Sarmiento,Carrera 23 #45-67,3888999000,roberto@email.com,2023-03-15
+49,Ana María Pardo,Avenida 34 #56-78,3999000111,anamaria@email.com,2023-04-28
+50,Camila Ortiz,Calle 90 #10-11,3666666666,camila@email.com,2023-08-22

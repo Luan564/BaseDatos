@@ -1,0 +1,101 @@
+id_producto,nombre,categoria,talla,precio,stock
+1,Camiseta básica,ropa,M,19.99,50
+2,Zapatos deportivos,calzado,42,59.99,30
+3,Jeans ajustados,ropa,L,39.99,20
+4,Chaqueta de cuero,ropa,XL,99.99,15
+5,Sandalias de verano,calzado,38,29.99,40
+6,Blusa de seda,ropa,S,49.99,25
+7,Tenis running,calzado,43,79.99,20
+8,Falda midi,ropa,M,34.99,30
+9,Botines de invierno,calzado,39,89.99,10
+10,Suéter tejido,ropa,L,45.99,35
+11,Chándal deportivo,ropa,M,59.99,20
+12,Zapatillas casual,calzado,40,49.99,25
+13,Vestido de fiesta,ropa,S,129.99,10
+14,Mocasines elegantes,calzado,41,69.99,15
+15,Pantalón cargo,ropa,L,54.99,30
+16,Chaqueta vaquera,ropa,M,89.99,20
+17,Sneakers urbanos,calzado,42,59.99,25
+18,Camisa de lino,ropa,L,39.99,40
+19,Botas de montaña,calzado,44,109.99,10
+20,Shorts deportivos,ropa,M,24.99,50
+21,Chaleco acolchado,ropa,XL,79.99,15
+22,Zapatos de vestir,calzado,43,89.99,20
+23,Top deportivo,ropa,S,19.99,60
+24,Sandalias con taco,calzado,37,39.99,30
+25,Parka invierno,ropa,L,149.99,10
+26,Zapatillas running,calzado,44,99.99,20
+27,Blazer elegante,ropa,M,119.99,15
+28,Bailarinas clásicas,calzado,38,34.99,25
+29,Jersey de punto,ropa,XL,49.99,30
+30,Chanclas playa,calzado,39,14.99,50
+31,Pantalón skinny,ropa,M,44.99,40
+32,Zapatos trekking,calzado,42,79.99,20
+33,Camiseta manga larga,ropa,L,29.99,35
+34,Botines de cuero,calzado,40,69.99,15
+35,Falda plisada,ropa,S,39.99,25
+36,Zapatos de tacón,calzado,37,59.99,20
+37,Chaqueta bomber,ropa,M,89.99,20
+38,Mocasines de piel,calzado,41,79.99,15
+39,Leggings deportivos,ropa,L,29.99,50
+40,Zapatillas skate,calzado,43,49.99,25
+41,Vestido casual,ropa,M,54.99,30
+42,Botas de agua,calzado,42,39.99,20
+43,Chaleco de lana,ropa,XL,59.99,15
+44,Zapatos de lona,calzado,40,24.99,40
+45,Blusa estampada,ropa,S,34.99,25
+46,Sandalias planas,calzado,38,29.99,30
+47,Pantalón chino,ropa,L,49.99,35
+48,Zapatos de gamuza,calzado,41,69.99,20
+49,Chaqueta parka,ropa,M,99.99,15
+50,Zapatillas de lona,calzado,39,19.99,50
+51,Camiseta estampada,ropa,L,22.99,40
+52,Botas de cuero,calzado,42,89.99,15
+53,Chándal completo,ropa,M,79.99,20
+54,Zapatos de charol,calzado,40,59.99,25
+55,Falda corta,ropa,S,29.99,30
+56,Zapatillas running,calzado,44,99.99,20
+57,Chaqueta de plumas,ropa,XL,149.99,10
+58,Mocasines de ante,calzado,41,69.99,15
+59,Top sin mangas,ropa,M,19.99,60
+60,Sandalias de cuero,calzado,37,49.99,30
+61,Pantalón de vestir,ropa,L,59.99,25
+62,Zapatos de trekking,calzado,43,89.99,20
+63,Blusa de algodón,ropa,S,29.99,40
+64,Botas de nieve,calzado,42,79.99,15
+65,Chaqueta de punto,ropa,M,49.99,30
+66,Zapatillas deportivas,calzado,40,39.99,35
+67,Vestido de noche,ropa,L,129.99,10
+68,Zapatos de tacón alto,calzado,38,69.99,20
+69,Chaleco de piel,ropa,XL,99.99,15
+70,Zapatos de lona,calzado,39,24.99,40
+71,Camiseta básica,ropa,M,19.99,50
+72,Zapatos deportivos,calzado,42,59.99,30
+73,Jeans ajustados,ropa,L,39.99,20
+74,Chaqueta de cuero,ropa,XL,99.99,15
+75,Sandalias de verano,calzado,38,29.99,40
+76,Blusa de seda,ropa,S,49.99,25
+77,Tenis running,calzado,43,79.99,20
+78,Falda midi,ropa,M,34.99,30
+79,Botines de invierno,calzado,39,89.99,10
+80,Suéter tejido,ropa,L,45.99,35
+81,Chándal deportivo,ropa,M,59.99,20
+82,Zapatillas casual,calzado,40,49.99,25
+83,Vestido de fiesta,ropa,S,129.99,10
+84,Mocasines elegantes,calzado,41,69.99,15
+85,Pantal ́on cargo,ropa,L,54.99,30
+86,Chaqueta vaquera,ropa,M,89.99,20
+87,Sneakers urbanos,calzado,42,59.99,25
+88,Camisa de lino,ropa,L,39.99,40
+89,Botas de monta~na,calzado,44,109.99,10
+90,Shorts deportivos,ropa,M,24.99,50
+91,Chaleco acolchado,ropa,XL,79.99,15
+92,Zapatos de vestir,calzado,43,89.99,20
+93,Top deportivo,ropa,S,19.99,60
+94,Sandalias con taco,calzado,37,39.99,30
+95,Parka invierno,ropa,L,149.99,10
+96,Zapatillas running,calzado,44,99.99,20
+97,Blazer elegante,ropa,M,119.99,15
+98,Bailarinas cl ́asicas,calzado,38,34.99,25
+99,Jersey de punto,ropa,XL,49.99,30
+100,Chanclas playa,calzado,39,14.99,50

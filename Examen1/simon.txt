@@ -1,0 +1,3 @@
+SELECT * FROM productos WHERE stock < 10;
+SELECT * FROM clientes WHERE fecha_registro BETWEEN '2023-07-01' AND '2023-07-31';
+SELECT metodo_pago, SUM(total) AS total_ventas FROM ventas GROUP BY metodo_pago;
