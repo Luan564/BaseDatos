@@ -1,0 +1,14 @@
+CREATE TABLE productos (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    codigo_barras VARCHAR(45) UNIQUE NOT NULL,
+    nombre VARCHAR(50) NOT NULL UNIQUE,
+    cantidad_piezas INT UNSIGNED DEFAULT 0,
+    precio DECIMAL(4,2)
+);
+
+INSERT INTO productos (id, codigo_barras, nombre, cantidad_piezas, precio) VALUES (’Camiseta b ́asica’, ’ropa’, ’M’, 19.99, 50),
+
+
+INSERT INTO productos (codigo_barras, nombre, cantidad_piezas, precio) VALUES ('7501139179641', 'simon', 45, 18.20);
+
+UPDATE productos SET nombre  = 'simon', precio = 20 WHERE codigo_barras = 'asf';

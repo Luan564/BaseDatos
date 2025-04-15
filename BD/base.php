@@ -12,7 +12,7 @@ die("Error de conexión: " . $conexion->connect_error);
 }
 // Insertar datos en la base de datos
 //echo $nombre."".$email."-----";
-$sql = "INSERT INTO usuarios (nombre, email) VALUES ('$nombre', '$email')";
+$sql = "INSERT INTO clientes (nombre, email) VALUES ('$nombre', '$email')";
 //echo $sql;
 if ($conexion->query($sql) === TRUE) {
 echo "Datos guardados correctamente.";
