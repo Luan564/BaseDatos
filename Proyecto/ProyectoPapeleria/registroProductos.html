@@ -68,34 +68,6 @@
     </form>
 
 
-    <!-- Formulario para la modificación de productos -->
-    <h1>Modificar producto</h1>
-    <form action="update_ModificarProductos.php" method="POST">
-        <!-- boton para que no funcione el "Enter" del lector -->
-        <button type="submit" disabled hidden aria-hidden="true"></button>
-
-        <label for="codigo_barras">Código de Barras:</label><br>
-        <input type="text" id="codigo_barras" name="codigo_barras" required autocomplete="off" maxlength="45"
-            placeholder="Ingrese el código de barras"><br><br>
-
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" autocomplete="off" maxlength="50"
-            placeholder="Ingrese el nombre del producto"><br><br>
-
-        <label for="cantidad_piezas">Cantidad de Piezas:</label><br>
-        <input type="number" id="cantidad_piezas" name="cantidad_piezas" autocomplete="off" min="0" value="0"
-            placeholder="Ingrese la cantidad"><br><br>
-
-        <label for="precio">Precio ($):</label><br>
-        <input type="number" id="precio" name="precio" autocomplete="off" min="0" max="99999.99" step="0.01"
-            placeholder="0.00"><br><br>
-
-        <input type="submit" value="Enviar">
-        
-    </form>
-
-
-
     <!-- Tabla de los productos -->
     <h2 style="text-align:center;">Productos en la Tienda</h2>
     <!-- Buscador de productos -->
@@ -108,7 +80,7 @@
                 <th>Piezas</th>
                 <th>Precio</th>
                 <th>Imagen</th>
-                <th>No name</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>

@@ -44,3 +44,6 @@ FORMULARIO PARA MODIFICAR
     <input type="submit" value="Enviar">
     
 </form>
+
+
+WHERE codigo_barras = 3154190517214;

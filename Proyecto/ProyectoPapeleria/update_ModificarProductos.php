@@ -1,9 +1,9 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-$codigo_barras = $_POST["codigo_barras"];
-$nombre = $_POST["nombre"];
-$cantidad_piezas = $_POST["cantidad_piezas"];
-$precio = $_POST["precio"];
+    $codigo_barras = $_POST["codigo_barras"];
+    $nombre = $_POST["nombre"];
+    $cantidad_piezas = $_POST["cantidad_piezas"];
+    $precio = $_POST["precio"];
 
     // echo $nombre."".$email."";
     if (!empty($codigo_barras)) {

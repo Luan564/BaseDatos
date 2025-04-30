@@ -37,8 +37,8 @@ Comando Update:
 
 Comando Delete:
 	* SET FOREIGN_KEY_CHECKS = 0; -- Deshabilita la restricción
-	  DELETE FROM autores WHERE id_autor = 4; -- Borra el autor sin error
-	  SET FOREIGN_KEY_CHECKS = 1; -- Vuelve a habilitar la restricción
+	DELETE FROM autores WHERE id_autor = 4; -- Borra el autor sin error
+	SET FOREIGN_KEY_CHECKS = 1; -- Vuelve a habilitar la restricción
 
 
 

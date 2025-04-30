@@ -8,31 +8,42 @@ fetch('select_TablaProductosMYSQL.php')
             const fila = document.createElement('tr');
             const enlaceGoogle = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(producto.codigo_barras)}`;
             fila.innerHTML = `
-            <td>${producto.id}</td>
-            <td>${producto.nombre}</td>
-            <td>${producto.cantidad_piezas}</td>
-            <td>$${producto.precio}</td>
-            <td><a href="${enlaceGoogle}" target="_blank">${producto.codigo_barras}</a></td>
-            <td><button class="botonEditar" data-codigo="${producto.codigo_barras}">Editar</button></td>
-
-
-
-            `;
+                <td>${producto.id}</td>
+                <td>${producto.nombre}</td>
+                <td>${producto.cantidad_piezas}</td>
+                <td>$${producto.precio}</td>
+                <td><a href="${enlaceGoogle}" target="_blank">${producto.codigo_barras}</a></td>
+                <td>
+                <button class="botonEditar" dato_codigo="${producto.codigo_barras}">Editar</button>
+                <button class="botonEliminar" dato_codigo="${producto.codigo_barras}">Eliminar</button>
+                </td>
+                `;
             tbody.appendChild(fila);
         });
+        // Evento para editar algún producto
         document.querySelectorAll('.botonEditar').forEach(boton => {
             boton.addEventListener('click', function () {
-                const codigo_barras = this.getAttribute('data-codigo');
+                const codigo_barras = this.getAttribute('dato_codigo');
                 mostrarFormularioEdicion(codigo_barras);
             });
         });
+
+        // Evento para ELIMAR un producto
+        document.querySelectorAll('.botonEliminar').forEach(boton => {
+            boton.addEventListener('click', function () {
+                const codigo_barras = this.getAttribute('dato_codigo');
+                const nombre = this.getAttribute('dato_nombre');
+                eliminarProducto(codigo_barras);
+            });
+        });
+
+
     })
     .catch(error => {
         console.error('Error al cargar los datos:', error);
-    });
+});
 
 // <!-- Script para realizar las busquedas en nuestra tabla -->
-
 document.getElementById('buscador').addEventListener('keyup', function () {
     const filtro = this.value.toLowerCase();
     const filas = document.querySelectorAll('#tabla_productos tbody tr');
@@ -45,7 +56,6 @@ document.getElementById('buscador').addEventListener('keyup', function () {
 
 
 // // // // FUNCIONES // // // //
-
 
 // <!-- Mostrar formulario de edición -->
 function mostrarFormularioEdicion(codigo_barras) {
@@ -87,17 +97,34 @@ function mostrarFormularioEdicion(codigo_barras) {
         </td>
     `;
 
-    const boton = document.querySelector(`button[data-codigo="${codigo_barras}"]`);
+    const boton = document.querySelector(`button[dato_codigo="${codigo_barras}"]`);
     const filaProducto = boton.closest('tr');
     filaProducto.parentNode.insertBefore(nuevaFila, filaProducto.nextSibling);
 }
 
-
 // <!-- Cerrar Formulario -->
-
 function cerrarFormulario() {
     const formExistente = document.querySelector('#formulario-edicion');
     if (formExistente) {
         formExistente.remove();
+    }
+}
+
+// <!-- Eliminar Producto -->
+function eliminarProducto(codigo_barras) {
+    if (confirm(`¿Estás seguro de eliminar el producto: ${codigo_barras}?`)) {
+        fetch('delete_Producto.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: `codigo_barras=${encodeURIComponent(codigo_barras)}`
+        })
+        .then(response => response.text())
+        .then(msg => {
+            alert(msg);
+            location.reload(); // Recargar la tabla después de eliminar
+        })
+        .catch(error => {
+            console.error('Error al eliminar:', error);
+        });
     }
 }
