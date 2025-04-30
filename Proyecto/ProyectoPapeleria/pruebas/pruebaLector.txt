@@ -12,3 +12,5 @@ INSERT INTO productos (id, codigo_barras, nombre, cantidad_piezas, precio) VALUE
 INSERT INTO productos (codigo_barras, nombre, cantidad_piezas, precio) VALUES ('7501139179641', 'simon', 45, 18.20);
 
 UPDATE productos SET nombre  = 'simon', precio = 20 WHERE codigo_barras = 'asf';
+
+INSERT INTO productos (codigo_barras, nombre, cantidad_piezas, precio) VALUES ('681681897984', 'Escalimetro', 120, 1500)"

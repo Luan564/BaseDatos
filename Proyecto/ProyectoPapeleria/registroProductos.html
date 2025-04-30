@@ -24,7 +24,6 @@
             background-color: #f4f4f4;
         }
     </style>
-
 </head>
 
 <body>
@@ -130,8 +129,8 @@
             <td>${producto.nombre}</td>
             <td>${producto.cantidad_piezas}</td>
             <td>$${producto.precio}</td>
-            <td><a href="${enlaceGoogle}" target="_blank">Buscar Imagen</a></td>
-          `;
+            <td><a href="${enlaceGoogle}" target="_blank">${producto.codigo_barras}</a></td>
+            `;
                     tbody.appendChild(fila);
                 });
             })
