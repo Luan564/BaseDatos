@@ -108,6 +108,7 @@
                 <th>Piezas</th>
                 <th>Precio</th>
                 <th>Imagen</th>
+                <th>No name</th>
             </tr>
         </thead>
         <tbody>
@@ -116,41 +117,9 @@
     </table>
 
     <!-- Script para el llenado de la tabla desde lo obtenido en el archivo select_TablaPriductosMYSQL.php -->
-    <script>
-        fetch('select_TablaProductosMYSQL.php')
-            .then(response => response.json())
-            .then(data => {
-                const tbody = document.querySelector('#tabla_productos tbody');
-                data.forEach(producto => {
-                    const fila = document.createElement('tr');
-                    const enlaceGoogle = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(producto.codigo_barras)}`;
-                    fila.innerHTML = `
-            <td>${producto.id}</td>
-            <td>${producto.nombre}</td>
-            <td>${producto.cantidad_piezas}</td>
-            <td>$${producto.precio}</td>
-            <td><a href="${enlaceGoogle}" target="_blank">${producto.codigo_barras}</a></td>
-            `;
-                    tbody.appendChild(fila);
-                });
-            })
-            .catch(error => {
-                console.error('Error al cargar los datos:', error);
-            });
-    </script>
-
     <!-- Script para realizar las busquedas en nuestra tabla -->
-    <script>
-        document.getElementById('buscador').addEventListener('keyup', function () {
-            const filtro = this.value.toLowerCase();
-            const filas = document.querySelectorAll('#tabla_productos tbody tr');
+    <script src="select_TablaProductosScript.js"></script>
 
-            filas.forEach(fila => {
-                const texto = fila.cells[1].textContent.toLowerCase(); // Columna "Nombre"
-                fila.style.display = texto.includes(filtro) ? '' : 'none';
-            });
-        });
-    </script>
 
 
 </body>
