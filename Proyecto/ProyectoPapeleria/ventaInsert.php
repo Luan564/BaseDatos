@@ -14,7 +14,7 @@ try {
         $cantidad = $producto['cantidad'];
 
         // Obtener id, precio y existencia actual
-        $stmt = $conexion->prepare("SELECT id, precio, cantidad_piezas FROM productos WHERE codigo_barras = ?");
+        $stmt = $conexion->prepare("SELECT id, nombre, precio, cantidad_piezas FROM productos WHERE codigo_barras = ?");
         $stmt->bind_param("s", $codigo);
         $stmt->execute();
         $resultado = $stmt->get_result();
@@ -35,6 +35,14 @@ try {
         $stmt_insert = $conexion->prepare("INSERT INTO ventas (id_producto, cantidad_vendida, fecha_venta, precio_unitario) VALUES (?, ?, ?, ?)");
         $stmt_insert->bind_param("iisd", $id, $cantidad, $fecha, $precio);
         $stmt_insert->execute();
+
+        // Calcular subtotal
+        $subtotal = $cantidad * $precio;
+
+        // Insertar en tabla historial (nueva tabla independiente)
+        $stmt_hist = $conexion->prepare("INSERT INTO historial (id_venta, fecha_venta, nombre_producto, cantidad_vendida, precio_unitario, subtotal) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt_hist->bind_param("issidd", $id_venta, $fecha, $producto['nombre'], $cantidad, $precio, $subtotal);
+        $stmt_hist->execute();
 
         // Actualizar inventario
         $stmt_update = $conexion->prepare("UPDATE productos SET cantidad_piezas = ? WHERE id = ?");
