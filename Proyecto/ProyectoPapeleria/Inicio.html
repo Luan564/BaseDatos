@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <!-- Estilo de la tabla -->
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: 20px auto;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="nav_contenedor">
+        <u1 class="nav_enlaces">
+            <li class="nav_enlace">
+                <a href="./Inicio.html" class="nav_enlaces">Inicio</a>
+            </li>
+            <li class="nav_enlace">
+                <a href="./Productos.html" class="nav_enlaces">Productos</a>
+            </li>
+            <li class="nav_enlace">
+                <a href="./#.html" class="nav_enlaces">Ayuda</a>
+            </li>
+        </u1>
+    </nav>
+
+    <!-- Formulario de ventas -->
+    <h1>Formulario de producto</h1>
+    <form action="ventaInsert.php" method="POST">
+
+        <label for="codigo_barras">Código de Barras:</label><br>
+        <input type="text" id="codigo_barras" name="codigo_barras" required autocomplete="off" maxlength="45"
+            placeholder="Ingrese el código de barras"><br><br>
+
+        <label for="cantidad_piezas">Cantidad de Piezas:</label><br>
+        <input type="number" id="cantidad_piezas" name="cantidad_piezas" required autocomplete="off" min="1" value="0"
+            placeholder="Ingrese la cantidad"><br><br>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+
+
+
+
+
+
+
+</body>

@@ -31,10 +31,10 @@
     <nav class="nav_contenedor">
         <u1 class="nav_enlaces">
             <li class="nav_enlace">
-                <a href="./inicioVentas.html" class="nav_enlaces">Inicio</a>
+                <a href="./Inicio.html" class="nav_enlaces">Inicio</a>
             </li>
             <li class="nav_enlace">
-                <a href="./registroProductos.html" class="nav_enlaces">Productos</a>
+                <a href="./Productos.html" class="nav_enlaces">Productos</a>
             </li>
             <li class="nav_enlace">
                 <a href="./#.html" class="nav_enlaces">Ayuda</a>
@@ -45,7 +45,7 @@
 
     <!-- Formulario para la alta de productos -->
     <h1>Formulario de producto</h1>
-    <form action="insert_registroProductosMYSQL.php" method="POST">
+    <form action="productoInsert.php" method="POST">
 
         <label for="codigo_barras">Código de Barras:</label><br>
         <input type="text" id="codigo_barras" name="codigo_barras" required autocomplete="off" maxlength="45"
@@ -90,7 +90,7 @@
 
     <!-- Script para el llenado de la tabla desde lo obtenido en el archivo select_TablaPriductosMYSQL.php -->
     <!-- Script para realizar las busquedas en nuestra tabla -->
-    <script src="select_TablaProductosScript.js"></script>
+    <script src="productoSelect.js"></script>
 
 
 

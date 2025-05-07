@@ -1,6 +1,6 @@
 // <!-- Script para el llenado de la tabla desde lo obtenido en el archivo select_TablaPriductosMYSQL.php -->
 
-fetch('select_TablaProductosMYSQL.php')
+fetch('productoSelect.php')
     .then(response => response.json())
     .then(data => {
         const tbody = document.querySelector('#tabla_productos tbody');
@@ -69,7 +69,7 @@ function mostrarFormularioEdicion(codigo_barras) {
     nuevaFila.innerHTML = `
         <td colspan="6">
         <h1>Modificar producto</h1>
-        <form action="update_ModificarProductos.php" method="POST">
+        <form action="productoUpdate.php" method="POST">
             <!-- boton para que no funcione el "Enter" del lector -->
             <button type="submit" disabled hidden aria-hidden="true"></button>
 
@@ -113,7 +113,7 @@ function cerrarFormulario() {
 // <!-- Eliminar Producto -->
 function eliminarProducto(codigo_barras) {
     if (confirm(`¿Estás seguro de eliminar el producto: ${codigo_barras}?`)) {
-        fetch('delete_Producto.php', {
+        fetch('productoDelete.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: `codigo_barras=${encodeURIComponent(codigo_barras)}`

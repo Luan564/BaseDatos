@@ -3,7 +3,7 @@ CREATE TABLE productos (
     codigo_barras VARCHAR(45) UNIQUE NOT NULL,
     nombre VARCHAR(50) NOT NULL UNIQUE,
     cantidad_piezas INT UNSIGNED DEFAULT 0,
-    precio DECIMAL(4,2)
+    precio DECIMAL(7,2)
 );
 
 INSERT INTO productos (id, codigo_barras, nombre, cantidad_piezas, precio) VALUES (’Camiseta b ́asica’, ’ropa’, ’M’, 19.99, 50),
@@ -47,3 +47,37 @@ FORMULARIO PARA MODIFICAR
 
 
 WHERE codigo_barras = 3154190517214;
+
+
+renombramiendo 
+
+delete_producto.php -> productoDelete.php                      si
+inicioVentas.html -> Inicio.html                               si
+insert_registroProductosMYSQL.php -> productoInsert.php        si
+registroProductos.html -> Productos.html                       si
+select_TablaProductosMYSQL.php -> productoSelect.php           si
+select_TablaProductosScript.js -> productoSelect.js            si
+update_ModificarProductos.php -> productoUpdate.php            si
+
+VENTAS
+CREATE TABLE ventas (
+    id_venta INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    id_producto INT NOT NULL,
+    cantidad_vendida INT UNSIGNED NOT NULL,
+    fecha_venta DATE NOT NULL,
+    precio_unitario DECIMAL(7,2) NOT NULL,
+    FOREIGN KEY (id_producto) REFERENCES productos(id)
+);
+
+
+
+CREATE TABLE ventas (
+    id_venta INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    id_producto INT(10) UNSIGNED NOT NULL,
+    cantidad_vendida INT UNSIGNED NOT NULL,
+    fecha_venta DATE NOT NULL,
+    precio_unitario DECIMAL(7,2) NOT NULL,
+    FOREIGN KEY (id_producto) REFERENCES productos(id)
+);
+
+INSERT INTO ventas (id_producto, cantidad_vendida, fecha_venta, precio_unitario) VALUES ('6', '1', '2025-05-06', 18.20);

@@ -33,7 +33,7 @@ $precio = $_POST["precio"];
     }
 }
 else{
-    header(header: "Location: registroProductos.html");
+    header(header: "Location: Productos.html");
     exit();
 }
 ?>
