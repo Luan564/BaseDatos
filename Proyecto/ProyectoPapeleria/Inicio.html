@@ -23,6 +23,25 @@
         th {
             background-color: #f4f4f4;
         }
+
+        #sugerencias {
+            border: 1px solid #ccc;
+            max-height: 150px;
+            overflow-y: auto;
+            position: absolute;
+            background: white;
+            z-index: 999;
+            width: 300px;
+            margin-top: 0;
+            padding-left: 0;
+            list-style: none;
+            display: none;
+        }
+
+        #sugerencias li:hover {
+            background-color: #f0f0f0;
+        }
+
     </style>
 </head>
 
@@ -43,8 +62,14 @@
     </nav>
 
     <!-- Formulario de ventas -->
-    <h1>Formulario de producto</h1>
+    <h1>Formulario de ventas</h1>
     <form action="ventaInsert.php" method="POST">
+
+        <label for="nombre_producto">Nombre de producto:</label><br>
+        <input type="text" id="nombre_producto" name="nombre_producto" autocomplete="off" maxlength="45"
+            placeholder="Busqueda por nombre"><br>
+            <ul id="sugerencias"></ul>
+        <br>
 
         <label for="codigo_barras">Código de Barras:</label><br>
         <input type="text" id="codigo_barras" name="codigo_barras" required autocomplete="off" maxlength="45"
@@ -54,14 +79,36 @@
         <input type="number" id="cantidad_piezas" name="cantidad_piezas" required autocomplete="off" min="1" value="0"
             placeholder="Ingrese la cantidad"><br><br>
 
-        <input type="submit" value="Enviar">
-
+        <button type="button" onclick="agregarAlCarrito()">Agregar al carrito</button>
     </form>
 
 
+    <h2>Carrito de productos</h2>
+    <table border="1" id="tablaCarrito">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Código de barras</th>
+                <th>Cantidad</th>
+                <th>Precio unitario</th>
+                <th>Subtotal</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <p><strong>Total:</strong> $<span id="totalGeneral">0.00</span></p>
+
+    <button type="button" onclick="registrarVenta()">Registrar venta</button>
 
 
 
 
 
+<script src="ventaSearch.js"></script>
+<script src="ventaCarrito.js"></script>
 </body>
+
+
+</html>
