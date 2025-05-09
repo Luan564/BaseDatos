@@ -23,6 +23,25 @@
         th {
             background-color: #f4f4f4;
         }
+
+        #sugerencias {
+            border: 1px solid #ccc;
+            max-height: 150px;
+            overflow-y: auto;
+            position: absolute;
+            background: white;
+            z-index: 999;
+            width: 300px;
+            margin-top: 0;
+            padding-left: 0;
+            list-style: none;
+            display: none;
+        }
+
+        #sugerencias li:hover {
+            background-color: #f0f0f0;
+        }
+
     </style>
 </head>
 
@@ -46,57 +65,45 @@
     </nav>
 
 
-    <!-- Formulario para la alta de productos -->
-    <h1>Formulario de producto</h1>
-    <form action="productoInsert.php" method="POST">
-
-        <label for="codigo_barras">Código de Barras:</label><br>
-        <input type="text" id="codigo_barras" name="codigo_barras" required autocomplete="off" maxlength="45"
-            placeholder="Ingrese el código de barras"><br><br>
-
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" required autocomplete="off" maxlength="50"
-            placeholder="Ingrese el nombre del producto"><br><br>
-
-        <label for="cantidad_piezas">Cantidad de Piezas:</label><br>
-        <input type="number" id="cantidad_piezas" name="cantidad_piezas" autocomplete="off" min="0" value="0"
-            placeholder="Ingrese la cantidad"><br><br>
-
-        <label for="precio">Precio ($):</label><br>
-        <input type="number" id="precio" name="precio" required autocomplete="off" min="0" max="99999.99" step="0.01"
-            placeholder="0.00"><br><br>
-
-        <input type="submit" value="Enviar">
-
-    </form>
-
-
-    <!-- Tabla de los productos -->
-    <h2 style="text-align:center;">Productos en la Tienda</h2>
+    <!-- Tabla de ventas -->
+    <h2 style="text-align:center;">Ventas</h2>
     <!-- Buscador de productos -->
-    <input type="text" id="buscador" placeholder="Buscar producto..." style="margin: 20px; padding: 5px; width: 200px;">
     <table id="tabla_productos">
         <thead>
             <tr>
-                <th>ID</th>
+                <th>ID de Venta</th>
+                <th>Fecha</th>
                 <th>Nombre</th>
-                <th>Piezas</th>
-                <th>Precio</th>
-                <th>Imagen</th>
-                <th></th>
+                <th>Piezas vendidas</th>
+                <th>Precio unitario</th>
+                <th>Subtotal</th>
             </tr>
         </thead>
         <tbody>
             <!-- Aquí se insertarán las filas con JS el SCRIPT de abajo -->
         </tbody>
     </table>
-
+ 
     <!-- Script para el llenado de la tabla desde lo obtenido en el archivo select_TablaPriductosMYSQL.php -->
     <!-- Script para realizar las busquedas en nuestra tabla -->
-    <script src="productoSelect.js"></script>
+    <script src="historialSelect.js"></script>
+ 
+
+
+
+
+
+
+
+
 
 
 
 </body>
+
+
+
+
+
 
 </html>
