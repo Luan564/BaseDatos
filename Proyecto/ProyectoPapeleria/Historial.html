@@ -64,10 +64,19 @@
         </u1>
     </nav>
 
+    <!-- Filtro por fechas -->
+    <div style="text-align:center; margin-bottom: 20px;">
+        <label for="fechaInicio">Desde:</label>
+        <input type="date" id="fechaInicio">
+        <label for="fechaFin">Hasta:</label>
+        <input type="date" id="fechaFin">
+        <button id="btnFiltrar">Filtrar</button>
+        <button id="btnLimpiar">Limpiar</button>
+    </div>
 
-    <!-- Tabla de ventas -->
+    <div id="totalVentas" style="text-align:center; font-weight:bold; margin-top: 20px;"> Total vendido: $0.00</div>
+    <!-- Tabla de historial -->
     <h2 style="text-align:center;">Ventas</h2>
-    <!-- Buscador de productos -->
     <table id="tabla_productos">
         <thead>
             <tr>
@@ -83,21 +92,12 @@
             <!-- Aquí se insertarán las filas con JS el SCRIPT de abajo -->
         </tbody>
     </table>
+
+    
  
     <!-- Script para el llenado de la tabla desde lo obtenido en el archivo select_TablaPriductosMYSQL.php -->
     <!-- Script para realizar las busquedas en nuestra tabla -->
     <script src="historialSelect.js"></script>
- 
-
-
-
-
-
-
-
-
-
-
 
 </body>
 
