@@ -27,17 +27,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         // Solo si hay campos para actualizar
         if (!empty($campos)) {
-            // Agregamos la condición del WHERE
+            // Solo si hay datos que actualizar, se construye y ejecuta la consulta
             $sql = "UPDATE productos SET " . implode(", ", $campos) . " WHERE codigo_barras = '$codigo_barras'";
-        }
 
-        if ($conexion->query($sql) === TRUE) {
-
-            header("Location: ".$_SERVER['PHP_SELF']);
-            exit();
-        }
-        else{
-            echo "Error: " . $sql . "<br>" . $conexion->error;
+            if ($conexion->query($sql) === TRUE) {
+                header("Location: " . $_SERVER['PHP_SELF']);
+                exit();
+            } else {
+                echo "Error: " . $sql . "<br>" . $conexion->error;
+            }
+        } else {
+            echo "<p style='color: red;'>No se proporcionó ningún campo para actualizar.</p>";
         }
         // Cerrar la conexión
         $conexion->close();

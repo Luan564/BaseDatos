@@ -7,31 +7,46 @@ function agregarAlCarrito() {
 
     if (!codigo || cantidad <= 0) return alert("Código o cantidad inválidos");
 
-    // Obtener precio y verificar en BD
     fetch(`ventaSearch.php?nombre=${nombre}`)
         .then(response => response.json())
         .then(data => {
             const producto = data.find(p => p.codigo_barras === codigo);
             if (!producto) return alert("Producto no encontrado");
 
-            if (cantidad > producto.cantidad_piezas) {
-                return alert("Cantidad excede existencia");
+            // Buscar si ya existe en el carrito
+            const existente = carrito.find(p => p.codigo === codigo);
+            let nuevaCantidad = cantidad;
+
+            if (existente) {
+                nuevaCantidad += existente.cantidad;
             }
 
-            const subtotal = producto.precio * cantidad;
+            // Verificar stock
+            if (nuevaCantidad > producto.cantidad_piezas) {
+                return alert(`Cantidad excede existencia. Stock disponible: ${producto.cantidad_piezas}`);
+            }
 
-            carrito.push({
-                nombre: producto.nombre,
-                codigo: producto.codigo_barras,
-                cantidad,
-                precio: producto.precio,
-                subtotal
-            });
+            if (existente) {
+                // Actualizar cantidades y subtotal
+                existente.cantidad = nuevaCantidad;
+                existente.subtotal = existente.precio * nuevaCantidad;
+            } else {
+                // Agregar nuevo producto al carrito
+                const subtotal = producto.precio * cantidad;
+                carrito.push({
+                    nombre: producto.nombre,
+                    codigo: producto.codigo_barras,
+                    cantidad,
+                    precio: producto.precio,
+                    subtotal
+                });
+            }
 
             renderizarCarrito();
             limpiarCampos();
         });
 }
+
 
 function renderizarCarrito() {
     const tbody = document.querySelector("#tablaCarrito tbody");
