@@ -81,3 +81,24 @@ CREATE TABLE ventas (
 );
 
 INSERT INTO ventas (id_producto, cantidad_vendida, fecha_venta, precio_unitario) VALUES ('6', '1', '2025-05-06', 18.20);
+
+
+
+CREATE VIEW historial AS
+SELECT 
+    v.id_venta,
+    v.fecha_venta,
+    p.nombre AS nombre_producto,
+    v.cantidad_vendida,
+    v.precio_unitario,
+    (v.cantidad_vendida * v.precio_unitario) AS subtotal
+FROM 
+    ventas v
+JOIN 
+    productos p ON v.id_producto = p.id;
+
+
+SELECT id_venta, fecha_venta, nombre_producto, cantidad_vendida, precio_unitario, subtotal FROM historial
+
+UPDATE ventas SET fecha_venta  = '2025-05-09' WHERE fecha_venta = '2025-05-07';
+ update * from ventas where fecha_venta = '2025-05-07';
