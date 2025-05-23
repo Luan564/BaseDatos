@@ -5,44 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historial ventas</title>
-    <!-- Estilo de la tabla -->
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 60%;
-            margin: 20px auto;
-        }
 
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #f4f4f4;
-        }
-
-        #sugerencias {
-            border: 1px solid #ccc;
-            max-height: 150px;
-            overflow-y: auto;
-            position: absolute;
-            background: white;
-            z-index: 999;
-            width: 300px;
-            margin-top: 0;
-            padding-left: 0;
-            list-style: none;
-            display: none;
-        }
-
-        #sugerencias li:hover {
-            background-color: #f0f0f0;
-        }
-
-    </style>
+    <link rel="stylesheet" href="./css/inicioEstilo.css">
+    <link rel="stylesheet" href="./css/historialEstilo.css">
 </head>
 
 <body>
@@ -65,7 +30,7 @@
     </nav>
 
     <!-- Filtro por fechas -->
-    <div style="text-align:center; margin-bottom: 20px;">
+    <div class="filtro-fechas">
         <label for="fechaInicio">Desde:</label>
         <input type="date" id="fechaInicio">
         <label for="fechaFin">Hasta:</label>

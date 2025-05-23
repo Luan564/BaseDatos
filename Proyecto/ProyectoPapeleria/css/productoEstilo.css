@@ -1,0 +1,196 @@
+/* --- Reset básico --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general de la página */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+/* Navegación */
+.nav_contenedor {
+    background-color: #007bff;
+    padding: 10px 0;
+}
+
+.nav_enlaces {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav_enlace a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav_enlace a:hover {
+    text-decoration: underline;
+}
+
+/* --- Encabezados --- */
+h1, h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Formulario */
+form {
+    max-width: 500px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Botón enviar */
+form input[type="submit"] {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Buscador */
+#buscador {
+    display: block;
+    margin: 10px auto 30px auto;
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Tabla */
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+  background-color: #ffffff;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+    background-color: #f1f1f1;
+}
+
+/* Imagen dentro de la tabla */
+td img {
+    max-width: 80px;
+    height: auto;
+}
+
+/* Estilo para botones con íconos */
+.btn-icono {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.btn-icono .fa-edit {
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+.btn-icono .fa-edit:hover {
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+.botonEstilo {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.botonEstilo:hover {
+    background-color: #28a745;
+}
+
+.botonGuardar {
+    background-color: #3498db; /* Azul */
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.botonGuardar:hover {
+    background-color: #2980b9;
+}
+
+.botonCancelar {
+    background-color: #e74c3c; /* Rojo */
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botonCancelar:hover {
+    background-color: #c0392b;
+}
+
+.contenedor-buscador {
+    display: flex;
+    justify-content: flex-end; /* Lo alinea a la derecha */
+    margin: 2x;
+}
+
+#buscador {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+/* Estilo para el formulario de edición */
+label {
+  font-weight: bold;
+}

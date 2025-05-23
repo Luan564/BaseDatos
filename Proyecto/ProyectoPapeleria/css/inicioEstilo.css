@@ -1,0 +1,156 @@
+/* --- Reset básico --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Cuerpo general --- */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+/* --- Navegación --- */
+nav {
+  background-color: #007bff;
+  padding: 10px 0;
+}
+
+.nav_enlaces {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav_enlace a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav_enlace a:hover {
+  text-decoration: underline;
+}
+
+/* --- Encabezados --- */
+h1, h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* --- Formulario --- */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* --- Botones --- */
+button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* --- Tabla del carrito --- */
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+  background-color: #ffffff;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #f1f1f1;
+}
+
+/* --- Total --- */
+p {
+  text-align: center;
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+/* --- Sugerencias --- */
+#sugerencias {
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  position: absolute;
+  background: white;
+  z-index: 999;
+  width: 300px;
+  margin-top: 0;
+  padding-left: 0;
+  list-style: none;
+  display: none;
+}
+
+#sugerencias li:hover {
+  background-color: #f0f0f0;
+}
+
+.carrito-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.resumen-venta {
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    min-width: 200px;
+    text-align: center;
+}
+
+.resumen-venta p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+button i.fa-trash-alt {
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+button i.fa-trash-alt:hover {
+    color: #ffffff;
+}
+

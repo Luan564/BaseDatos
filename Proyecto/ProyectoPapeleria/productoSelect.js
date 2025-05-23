@@ -14,8 +14,8 @@ fetch('productoSelect.php')
                 <td>$${producto.precio}</td>
                 <td><a href="${enlaceGoogle}" target="_blank">${producto.codigo_barras}</a></td>
                 <td>
-                <button class="botonEditar" dato_codigo="${producto.codigo_barras}">Editar</button>
-                <button class="botonEliminar" dato_codigo="${producto.codigo_barras}">Eliminar</button>
+                <button class="botonEditar botonEstilo" dato_codigo="${producto.codigo_barras}"><i class="fas fa-edit"></i></button>
+                <button class="botonEliminar botonEstilo" dato_codigo="${producto.codigo_barras}"><i class="fas fa-trash-alt"></i></button>
                 </td>
                 `;
             tbody.appendChild(fila);
@@ -89,8 +89,8 @@ function mostrarFormularioEdicion(codigo_barras) {
             <input type="number" id="precio" name="precio" autocomplete="off" min="0" max="99999.99" step="0.01"
                 placeholder="0.00"><br><br>
 
-            <button type="submit">Guardar</button>
-            <button type="button" onclick="cerrarFormulario()">Cancelar</button>
+            <button type="submit" class="botonGuardar">Guardar</button>
+            <button type="button" onclick="cerrarFormulario()" class="botonCancelar">Cancelar</button>
         </form>
 
 
