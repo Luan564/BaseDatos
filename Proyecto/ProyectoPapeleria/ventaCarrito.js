@@ -62,7 +62,7 @@ function renderizarCarrito() {
                 <td>${item.cantidad}</td>
                 <td>$${item.precio}</td>
                 <td>$${item.subtotal.toFixed(2)}</td>
-                <td><button onclick="eliminarDelCarrito(${index})">Eliminar</button></td>
+                <td><button onclick="eliminarDelCarrito(${index})"><i class="fas fa-trash-alt"></i></button></td>
             </tr>
         `;
         tbody.innerHTML += row;

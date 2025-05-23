@@ -5,50 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <!-- Estilo de la tabla -->
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 60%;
-            margin: 20px auto;
-        }
 
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
+    <link rel="stylesheet" href="./css/inicioEstilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        th {
-            background-color: #f4f4f4;
-        }
-
-        #sugerencias {
-            border: 1px solid #ccc;
-            max-height: 150px;
-            overflow-y: auto;
-            position: absolute;
-            background: white;
-            z-index: 999;
-            width: 300px;
-            margin-top: 0;
-            padding-left: 0;
-            list-style: none;
-            display: none;
-        }
-
-        #sugerencias li:hover {
-            background-color: #f0f0f0;
-        }
-
-    </style>
+    
 </head>
 
 <body>
     <!-- Barra de Navegación -->
     <nav class="nav_contenedor">
-        <u1 class="nav_enlaces">
+        <ul class="nav_enlaces">
             <li class="nav_enlace">
                 <a href="./Inicio.html" class="nav_enlaces">Inicio</a>
             </li>
@@ -61,22 +28,22 @@
             <li class="nav_enlace">
                 <a href="./#.html" class="nav_enlaces">Ayuda</a>
             </li>
-        </u1>
+        </ul>
     </nav>
 
     <!-- Formulario de ventas -->
     <h1>Formulario de ventas</h1>
     <form action="ventaInsert.php" method="POST">
 
-        <label for="nombre_producto">Nombre de producto:</label><br>
-        <input type="text" id="nombre_producto" name="nombre_producto" autocomplete="off" maxlength="45"
-            placeholder="Busqueda por nombre"><br>
-            <ul id="sugerencias"></ul>
-        <br>
-
         <label for="codigo_barras">Código de Barras:</label><br>
         <input type="text" id="codigo_barras" name="codigo_barras" required autocomplete="off" maxlength="45"
             placeholder="Ingrese el código de barras"><br><br>
+
+        <label for="nombre_producto">Nombre de producto:</label><br>
+        <input type="text" id="nombre_producto" name="nombre_producto" autocomplete="off" maxlength="45"
+            placeholder="Busqueda por nombre"><br>
+            <ul id="sugerencias"></ul><br>
+
 
         <label for="cantidad_piezas">Cantidad de Piezas:</label><br>
         <input type="number" id="cantidad_piezas" name="cantidad_piezas" required autocomplete="off" min="1" value="0"
@@ -87,23 +54,26 @@
 
 
     <h2>Carrito de productos</h2>
-    <table border="1" id="tablaCarrito">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Código de barras</th>
-                <th>Cantidad</th>
-                <th>Precio unitario</th>
-                <th>Subtotal</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+    <div class="carrito-contenedor">
+        <table border="1" id="tablaCarrito">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Código de barras</th>
+                    <th>Cantidad</th>
+                    <th>Precio unitario</th>
+                    <th>Subtotal</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
 
-    <p><strong>Total:</strong> $<span id="totalGeneral">0.00</span></p>
-
-    <button type="button" onclick="registrarVenta()">Registrar venta</button>
+        <div class="resumen-venta">
+            <p><strong>Total:</strong> $<span id="totalGeneral">0.00</span></p>
+            <button type="button" onclick="registrarVenta()">Registrar venta</button>
+        </div>
+    </div>
 
 
 

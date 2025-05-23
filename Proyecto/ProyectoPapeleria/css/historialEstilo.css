@@ -1,0 +1,138 @@
+/* --- Reset básico --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+nav.nav_contenedor {
+  background-color: #007bff;
+  padding: 10px 0;
+}
+
+.nav_enlaces {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav_enlace a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav_enlace a:hover {
+  text-decoration: underline;
+}
+
+/* Título */
+h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Filtro de fechas */
+.filtro-fechas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.filtro-fechas input[type="date"] {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.filtro-fechas button {
+    padding: 6px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.filtro-fechas button:hover {
+    background-color: #45a049;
+}
+
+/* Total de ventas */
+#totalVentas {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Tabla de historial */
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+  background-color: #ffffff;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #f1f1f1;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Autocompletado (si se usa) */
+#sugerencias {
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    background: white;
+    z-index: 999;
+    width: 300px;
+    margin-top: 0;
+    padding-left: 0;
+    list-style: none;
+    display: none;
+}
+
+#sugerencias li:hover {
+    background-color: #f0f0f0;
+}
+
+.filtro-fechas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 600px;      /* Más ancho */
+    min-width: 350px;      /* Opcional: ancho mínimo */
+    width: 100%;
+    background: #fff;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.filtro-fechas input[type="date"] {
+    flex: 1;               /* Hace que los inputs crezcan */
+    min-width: 120px;      /* Opcional: ancho mínimo para inputs */
+}
