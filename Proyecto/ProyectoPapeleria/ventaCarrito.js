@@ -7,11 +7,30 @@ function agregarAlCarrito() {
 
     if (!codigo || cantidad <= 0) return alert("Código o cantidad inválidos");
 
-    fetch(`ventaSearch.php?nombre=${nombre}`)
+    // Si hay código de barras, buscar por código, si no, buscar por nombre
+    let url = "";
+    if (codigo) {
+        url = `ventaSearch.php?codigo=${encodeURIComponent(codigo)}`;
+    } else {
+        url = `ventaSearch.php?nombre=${encodeURIComponent(nombre)}`;
+    }
+
+    fetch(url)
         .then(response => response.json())
         .then(data => {
-            const producto = data.find(p => p.codigo_barras === codigo);
+            // Si se buscó por código, data será un solo producto o un array con uno
+            let producto = null;
+            if (Array.isArray(data)) {
+                if (codigo) {
+                    producto = data.find(p => p.codigo_barras === codigo);
+                } else {
+                    producto = data.find(p => p.nombre === nombre);
+                }
+            } else {
+                producto = data;
+            }
             if (!producto) return alert("Producto no encontrado");
+
 
             // Buscar si ya existe en el carrito
             const existente = carrito.find(p => p.codigo === codigo);
