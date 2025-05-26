@@ -8,7 +8,7 @@ $precio = $_POST["precio"];
     // echo $nombre."".$email."";
     if (!empty($codigo_barras) && !empty($nombre) && !empty($cantidad_piezas) && !empty($precio)) {
         // Conectar a la base de datos
-        $conexion = new mysqli("localhost", "Luis", "5648", "productoprueba");
+        $conexion = new mysqli("localhost", "Luis", "5648", "papeleria_pao");
         // Verificar la conexión
         if ($conexion->connect_error) {
             die("Error de conexión: " . $conexion->connect_error);

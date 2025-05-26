@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // echo $codigo;
     if (!empty($codigo)) {
         // Conectar a la base de datos
-        $conexion = new mysqli("localhost", "Luis", "5648", "productoprueba");
+        $conexion = new mysqli("localhost", "Luis", "5648", "papeleria_pao");
         // Verificar la conexión
         if ($conexion->connect_error) {
             die("Error de conexión: " . $conexion->connect_error);
