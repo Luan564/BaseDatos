@@ -43,6 +43,28 @@ fetch('productoSelect.php')
         console.error('Error al cargar los datos:', error);
 });
 
+
+function ordenarTablaProductos(columna, tipo = 'string', ascendente = true) {
+    const tbody = document.querySelector('#tabla_productos tbody');
+    const filas = Array.from(tbody.querySelectorAll('tr'));
+
+    filas.sort((a, b) => {
+        let valorA = a.cells[columna].textContent.trim();
+        let valorB = b.cells[columna].textContent.trim();
+
+        if (tipo === 'number') {
+            valorA = parseFloat(valorA.replace('$', ''));
+            valorB = parseFloat(valorB.replace('$', ''));
+        }
+
+        if (valorA < valorB) return ascendente ? -1 : 1;
+        if (valorA > valorB) return ascendente ? 1 : -1;
+        return 0;
+    });
+
+    filas.forEach(fila => tbody.appendChild(fila));
+}
+
 // <!-- Script para realizar las busquedas en nuestra tabla -->
 document.getElementById('buscador').addEventListener('keyup', function () {
     const filtro = this.value.toLowerCase();
@@ -128,3 +150,30 @@ function eliminarProducto(codigo_barras) {
         });
     }
 }
+
+let ordenActual = {
+    id: false,
+    nombre: false,
+    piezas: false,
+    precio: false
+};
+
+document.getElementById('orden_id').addEventListener('click', () => {
+    ordenActual.id = !ordenActual.id;
+    ordenarTablaProductos(0, 'number', ordenActual.id);
+});
+
+document.getElementById('orden_nombre').addEventListener('click', () => {
+    ordenActual.nombre = !ordenActual.nombre;
+    ordenarTablaProductos(1, 'string', ordenActual.nombre);
+});
+
+document.getElementById('orden_piezas').addEventListener('click', () => {
+    ordenActual.piezas = !ordenActual.piezas;
+    ordenarTablaProductos(2, 'number', ordenActual.piezas);
+});
+
+document.getElementById('orden_precio').addEventListener('click', () => {
+    ordenActual.precio = !ordenActual.precio;
+    ordenarTablaProductos(3, 'number', ordenActual.precio);
+});

@@ -194,3 +194,40 @@ td img {
 label {
   font-weight: bold;
 }
+
+/* Botones de orden en encabezados de tabla */
+th > button.orden-columna,
+th > button[id^="orden_"] {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    font: inherit;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+th > button.orden-columna:hover,
+th > button[id^="orden_"]:hover {
+    background: #e0e7ef;
+    color: #007bff;
+}
+
+th > button.orden-columna i,
+th > button[id^="orden_"] i {
+    font-size: 1em;
+    color: #888;
+    transition: color 0.2s;
+}
+
+th > button.orden-columna:hover i,
+th > button[id^="orden_"]:hover i {
+    color: #007bff;
+}
