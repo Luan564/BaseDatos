@@ -172,6 +172,7 @@ th > button[id^="orden_"] i {
 th > button.orden-columna:hover i,
 th > button[id^="orden_"]:hover i {
     color: #007bff;
+}
 
 footer {
   background-color: #2d92fd;
