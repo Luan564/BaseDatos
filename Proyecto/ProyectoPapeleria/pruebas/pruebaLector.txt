@@ -102,3 +102,22 @@ SELECT id_venta, fecha_venta, nombre_producto, cantidad_vendida, precio_unitario
 
 UPDATE ventas SET fecha_venta  = '2025-05-09' WHERE fecha_venta = '2025-05-07';
  update * from ventas where fecha_venta = '2025-05-07';
+
+
+
+SELECT 
+    id_producto,
+    p.nombre AS producto,
+    SUM(dv.cantidad) AS total_vendido,
+    COUNT(DISTINCT v.venta_id) AS veces_vendido
+FROM 
+    Productos p
+JOIN 
+    DetalleVenta dv ON p.producto_id = dv.producto_id
+JOIN 
+    Ventas v ON dv.venta_id = v.venta_id
+GROUP BY 
+    p.producto_id, p.nombre
+ORDER BY 
+    total_vendido DESC
+LIMIT 1;
