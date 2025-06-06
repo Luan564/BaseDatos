@@ -195,6 +195,7 @@ label {
   font-weight: bold;
 }
 
+
 /* Botones de orden en encabezados de tabla */
 th > button.orden-columna,
 th > button[id^="orden_"] {
@@ -230,4 +231,20 @@ th > button[id^="orden_"] i {
 th > button.orden-columna:hover i,
 th > button[id^="orden_"]:hover i {
     color: #007bff;
+
+footer {
+  background-color: #2d92fd;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0 6px 0;
+  margin-top: 10px;
+  font-size: 0.5em;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.04);
+}
+
+footer p {
+  margin: 0;
+  letter-spacing: 0.5px;
+
 }
