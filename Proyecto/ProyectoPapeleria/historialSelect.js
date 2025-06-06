@@ -1,7 +1,12 @@
-function cargarDatos(fechaInicio = '', fechaFin = '') {
+let columnaOrdenActual = 'fecha_venta';
+let ordenAscendente = false;
+
+function cargarDatos(fechaInicio = '', fechaFin = '', columnaOrden = 'fecha_venta', asc = false) {
     const url = new URL('historialSelect.php', window.location.href);
     if (fechaInicio) url.searchParams.append('fechaInicio', fechaInicio);
     if (fechaFin) url.searchParams.append('fechaFin', fechaFin);
+    url.searchParams.append('ordenarPor', columnaOrden);
+    url.searchParams.append('ascendente', asc ? '1' : '0');
 
     fetch(url)
         .then(response => response.json())
@@ -14,47 +19,54 @@ function cargarDatos(fechaInicio = '', fechaFin = '') {
             data.forEach(producto => {
                 const fila = document.createElement('tr');
                 fila.innerHTML = `
-                    <td>${producto.id_venta}</td>
                     <td>${producto.fecha_venta}</td>
                     <td>${producto.nombre_producto}</td>
-                    <td>${producto.cantidad_vendida}</td>
+                    <td>${producto.total_vendida}</td>
                     <td>$${producto.precio_unitario}</td>
-                    <td>$${producto.subtotal}</td>
+                    <td>$${producto.total_subtotal}</td>
                 `;
                 tbody.appendChild(fila);
 
-                // Sumar subtotal
-                total += parseFloat(producto.subtotal);
+                total += parseFloat(producto.total_subtotal);
             });
 
-            // Mostrar el total en el div
-            const totalDiv = document.getElementById('totalVentas');
-            totalDiv.textContent = `Total vendido: $${total.toFixed(2)}`;
+            document.getElementById('totalVentas').textContent = `Total vendido: $${total.toFixed(2)}`;
         })
-        .catch(error => {
-            console.error('Error al cargar los datos:', error);
-        });
+        .catch(error => console.error('Error al cargar los datos:', error));
 }
 
 function filtrarPorFecha() {
     const fechaInicio = document.getElementById('fechaInicio').value;
     const fechaFin = document.getElementById('fechaFin').value;
-    console.log("Filtrando desde:", fechaInicio, "hasta:", fechaFin); // <- Depuración
-    cargarDatos(fechaInicio, fechaFin);
+    cargarDatos(fechaInicio, fechaFin, columnaOrdenActual, ordenAscendente);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('btnFiltrar').addEventListener('click', filtrarPorFecha);
-    cargarDatos(); // Carga inicial
+
+    document.querySelectorAll('.orden-columna').forEach(boton => {
+        boton.addEventListener('click', () => {
+            const columna = boton.dataset.columna;
+
+            // Si se vuelve a hacer clic en la misma columna, se invierte el orden
+            if (columnaOrdenActual === columna) {
+                ordenAscendente = !ordenAscendente;
+            } else {
+                columnaOrdenActual = columna;
+                ordenAscendente = true; // nueva columna, comenzamos ascendente
+            }
+
+            filtrarPorFecha(); // vuelve a cargar datos con orden
+        });
+    });
+
+    cargarDatos(); // carga inicial
 });
 
 document.getElementById('btnLimpiar').addEventListener('click', () => {
-    // Limpia los campos de fecha
     document.getElementById('fechaInicio').value = '';
     document.getElementById('fechaFin').value = '';
-    
-    // Vuelve a cargar todos los datos sin filtros
+    columnaOrdenActual = 'fecha_venta';
+    ordenAscendente = false;
     cargarDatos();
 });
-
-

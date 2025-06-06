@@ -7,7 +7,7 @@ if ($conexion->connect_error) {
 }
 
 // Select a la tabla
-$sql = "SELECT id, nombre, cantidad_piezas, precio, codigo_barras FROM productos";
+$sql = "SELECT id, nombre, cantidad_piezas, precio, codigo_barras FROM productos ORDER BY id DESC";
 $resultado = $conexion->query($sql);
 
 $datos = [];
